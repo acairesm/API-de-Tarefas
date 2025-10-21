@@ -42,4 +42,9 @@ public class SeedService
                 ProgressoPercentual = rnd.Next(0, 101),
                 Status = status[rnd.Next(status.Length)]
             };
-        }).
+        }).ToList();
+
+        await _db.Projetos.AddRangeAsync(projetos);
+        await _db.SaveChangesAsync();
+    }
+}
