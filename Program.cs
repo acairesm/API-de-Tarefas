@@ -17,7 +17,7 @@ using (var scope = app.Services.CreateScope())
     await seedService.SeedAsync();
 }
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Bem-vindo à API de Gerenciamento de Projetos!");
 app.MapGetProjetosRoutes();
 app.MapPostProjetosRoutes();
 app.MapDeleteProjetosRoutes();
